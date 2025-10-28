@@ -1,0 +1,114 @@
+/* Estilos personalizados - en español */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.fijo {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.seccion {
+  padding: 80px 20px 60px;
+  margin-top: 70px; /* Compensar navbar fijo */
+}
+
+.titulo-seccion {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+.btn-cta {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+}
+
+.foto-perfil {
+  max-width: 200px;
+  border: 4px solid #ddd;
+}
+
+/* Efecto hover con CSS */
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.portafolio-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portafolio-card:hover {
+  border-color: #0d6efd;
+  background-color: #f8f9fa;
+}
+
+/* Grid de clientes */
+.clientes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cliente-item {
+  background: #f1f1f1;
+  padding: 15px 25px;
+  border-radius: 8px;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Barras de habilidades */
+.habilidad-item {
+  margin: 15px 0;
+}
+
+.barra-progreso {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progreso {
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
+/* Timeline simple */
+.timeline-item {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.redes-sociales {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion {
+    margin-top: 80px;
+  }
+}
