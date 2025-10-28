@@ -1,20 +1,20 @@
-# Portafolio + CV - [Ismael Valdivia]
+# Portafolio Académico - Ismael Valdivia
 
-Este sitio web combina un currículum profesional con un portafolio interactivo, diseñado para mostrar mis habilidades técnicas, experiencia académica y proyectos personales.
+## 📋 Descripción
+Portafolio personal que muestra mi perfil como **estudiante de programación**, con enfoque en desarrollo web (HTML, CSS, JavaScript) y bases de datos (MySQL). Este sitio refleja mis conocimientos actuales, proyectos académicos y habilidades blandas.
 
-## 🧑‍💻 Autor
-- Nombre: [Ismael Valdivia]
-- Correo: Isma49345@gmail.com
-- GitHub: [ismael-valdivia-D](https://github.com/ismael-valdivia-D)
+## 👤 Autor
+**Ismael Valdivia**  
+Estudiante de Técnico en Programación  
+📧 isma49345@gmail.com  
+📸 Instagram: [@_1.8.57_](https://instagram.com/_1.8.57_)  
+🔗 [GitHub](https://github.com/ismael-valdivia-D)
 
-## 🛠️ Tecnologías Usadas
-- HTML5
-- CSS3 (con `display: flex`)
-- JavaScript (ES6)
-- Bootstrap 5 (solo CDN)
-- GitHub Pages (despliegue)
+## 🛠️ Tecnologías Utilizadas
+- **HTML5**: Estructura semántica
+- **CSS3**: Estilos personalizados y diseño responsivo
+- **JavaScript**: Interactividad con eventos (`this`)
+- **Bootstrap 5**: Componentes y grillas responsivas
+- **Git & GitHub**: Control de versiones y despliegue
 
-## 📥 Cómo visualizar localmente
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+## 📁 Estructura del Proyecto
