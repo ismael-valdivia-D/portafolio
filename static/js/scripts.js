@@ -106,25 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   animarBarrasProgreso();
 
-  // Formulario de contacto
-  const formularioContacto = document.getElementById('formulario-contacto');
-  if (formularioContacto) {
-    formularioContacto.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre-contacto').value;
-      const email = document.getElementById('email-contacto').value;
-      const tema = document.getElementById('tema-contacto').value;
-      const mensaje = document.getElementById('mensaje-contacto').value;
-      if (nombre && email && tema && mensaje) {
-        alert(`✓ Mensaje enviado correctamente!\nNombre: ${nombre}\nEmail: ${email}\nTema: ${tema}\nGracias por contactarme. Te responderé pronto.`);
-        formularioContacto.reset();
-        document.getElementById('mensaje-tema').textContent = '';
-      } else {
-        alert('⚠ Por favor, completa todos los campos del formulario.');
-      }
-    });
-  }
-
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(enlace => {
     enlace.addEventListener('click', function(e) {
