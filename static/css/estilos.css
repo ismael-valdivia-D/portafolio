@@ -1,45 +1,61 @@
 /* ========================================
-   ESTILOS PERSONALIZADOS - ISMAEL VALDIVIA
-   Portafolio + CV Profesional
+   ESTILOS PROFESIONALES - ISMAEL VALDIVIA
+   Diseño moderno 2024–2025
    ======================================== */
 
-/* ===== ESTILOS GENERALES ===== */
-body {
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #4f46e5;
+  --color-primary-light: #6366f1;
+  --color-bg-light: #f8fafc;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --border-radius: 12px;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ===== BARRA DE NAVEGACIÓN FIJA ===== */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: #fafafa;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVEGACIÓN ===== */
 .fijo {
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
-
-.navbar-nav .nav-link.active {
-  color: #fff !important;
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
 }
-
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: #ccc !important;
-  transition: color 0.3s ease;
+  color: var(--color-primary-light) !important;
 }
 
 /* ===== SECCIONES ===== */
 .seccion {
-  padding: 80px 20px 60px;
-  margin-top: 70px;
-  min-height: 400px;
+  padding: 100px 20px 80px;
+  margin-top: 80px;
 }
-
+.seccion.bg-light {
+  background-color: var(--color-bg-light);
+}
 .seccion-inicio {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5, #7e22ce);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -49,176 +65,128 @@ body {
   margin-top: 0;
 }
 
-/* ===== TÍTULOS Y TEXTOS ===== */
+/* ===== TÍTULOS ===== */
 .titulo-principal {
   font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  animation: fadeInDown 1s ease-in-out;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
-
+.subtitulo {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+.descripcion-breve {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
 .titulo-seccion {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #2c3e50;
+  font-size: 2.2rem;
+  font-weight: 700;
   text-align: center;
-  font-weight: bold;
+  margin-bottom: 50px;
   position: relative;
   padding-bottom: 15px;
 }
-
 .titulo-seccion::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 70px;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: var(--color-primary);
   border-radius: 2px;
-}
-
-.subtitulo {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  font-weight: 300;
-}
-
-.descripcion-breve {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.texto-biografia {
-  font-size: 1.1rem;
-  text-align: justify;
-  line-height: 1.8;
-  margin-bottom: 15px;
 }
 
 /* ===== BOTONES ===== */
 .btn-cta {
-  margin: 10px;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  border-radius: 30px;
+  margin: 0.5rem;
+  padding: 12px 32px;
+  font-size: 1.05rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  border-radius: 30px;
+  background: var(--color-primary);
+  border: none;
+  transition: var(--transition);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
-
 .btn-cta:hover {
+  background: #4338ca;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
+}
+.btn-outline-light {
+  border-color: white;
+  color: white;
+}
+.btn-outline-light:hover {
+  background: white;
+  color: var(--color-primary);
 }
 
 /* ===== IMAGEN DE PERFIL ===== */
 .foto-perfil {
-  max-width: 250px;
-  border: 5px solid #667eea;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 240px;
+  border: 4px solid white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
-
 .foto-perfil:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.03);
 }
 
-/* ===== TARJETAS DE SERVICIOS ===== */
-.servicio-card {
-  border: 2px solid transparent;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* ===== TARJETAS ===== */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  height: 100%;
 }
-
-.servicio-card.resaltada {
-  background-color: #f0f4ff !important;
-  border-left: 5px solid #667eea !important;
-  transform: scale(1.02) !important;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
-
-.servicio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border-color: #667eea;
+.servicio-card .card-body {
+  padding: 2rem;
 }
-
-.servicio-card .card-title {
-  color: #667eea;
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-/* ===== GRID DE CLIENTES ===== */
-.clientes-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.cliente-item {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 20px 30px;
-  border-radius: 12px;
-  min-width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.cliente-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.servicio-card i {
+  opacity: 0.8;
 }
 
 /* ===== HABILIDADES ===== */
 .habilidad-item {
-  margin: 20px 0;
+  margin: 1.5rem 0;
 }
-
 .barra-progreso {
-  height: 12px;
-  background: #e9ecef;
-  border-radius: 10px;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
   overflow: hidden;
-  margin: 10px 0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .progreso {
   height: 100%;
-  transition: width 1.5s ease-in-out;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Colores definidos por clase en HTML */
+  border-radius: 5px;
+  transition: width 1.2s ease-in-out;
 }
-
-.progreso:nth-child(1) { background-color: #4CAF50; }
-.progreso:nth-child(2) { background-color: #FF9800; }
-.progreso:nth-child(3) { background-color: #2196F3; }
-.progreso:nth-child(4) { background-color: #333; }
+.progreso-html { background: #10b981; }
+.progreso-js { background: #f59e0b; }
+.progreso-mysql { background: #3b82f6; }
+.progreso-git { background: #1e293b; }
 
 .lista-habilidades-blandas {
   list-style: none;
   padding: 0;
 }
-
 .lista-habilidades-blandas li {
-  padding: 10px 0;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #e9ecef;
-}
-
-.lista-habilidades-blandas li:last-child {
-  border-bottom: none;
+  padding: 0.6rem 0;
+  font-size: 1.05rem;
 }
 
 /* ===== TIMELINE ===== */
@@ -226,166 +194,65 @@ body {
   position: relative;
   padding-left: 30px;
 }
-
 .timeline-item {
-  margin-bottom: 35px;
-  padding-bottom: 30px;
-  border-left: 3px solid #667eea;
+  margin-bottom: 50px;
   padding-left: 25px;
   position: relative;
+  border-left: 2px solid var(--color-primary);
 }
-
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -8px;
+  left: -6px;
   top: 0;
-  width: 15px;
-  height: 15px;
-  background: #667eea;
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #667eea;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px var(--color-primary-light);
 }
-
-.timeline-item:last-child {
-  border-left: 3px solid transparent;
-  padding-bottom: 0;
-}
-
 .timeline-fecha {
-  color: #667eea;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
 }
-
-.timeline-contenido h6 {
-  font-size: 1.2rem;
-  color: #2c3e50;
-  margin-bottom: 5px;
-}
-
 .timeline-institucion {
-  color: #7f8c8d;
+  color: var(--color-muted);
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 .timeline-descripcion {
-  color: #555;
-  line-height: 1.8;
+  color: #475569;
+  line-height: 1.7;
 }
 
-/* ===== TARJETAS DE PORTAFOLIO ===== */
-.portafolio-card {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.portafolio-card.activa {
-  transform: scale(0.95) !important;
-  opacity: 0.8 !important;
-}
-
-.portafolio-card:hover {
-  border-color: #667eea;
-  background-color: #f8f9fa;
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-.portafolio-card .card-title {
-  color: #2c3e50;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.tecnologias-proyecto {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tecnologias-proyecto .badge {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-}
-
-.badge.bg-purple {
-  background-color: #9b59b6 !important;
-}
-
-/* ===== REDES SOCIALES ===== */
-.redes-sociales .btn {
-  margin: 5px;
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.redes-sociales .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ===== FORMULARIO DE CONTACTO ===== */
-#formulario-contacto .form-control {
+/* ===== FORMULARIO ===== */
+.form-control {
   border-radius: 8px;
-  border: 2px solid #e9ecef;
-  padding: 12px;
-  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border: 1px solid #cbd5e1;
 }
-
-#formulario-contacto .form-control:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-}
-
-#mensaje-tema {
-  font-weight: 600;
-  font-size: 0.95rem;
-  min-height: 20px;
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.2);
 }
 
 /* ===== FOOTER ===== */
 footer {
-  margin-top: 50px;
-  border-top: 3px solid #667eea;
+  margin-top: 60px;
+  border-top: none;
 }
 
-/* ===== ANIMACIONES ===== */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .seccion { margin-top: 60px; padding: 60px 15px 40px; }
+  .seccion { padding: 80px 15px 60px; }
   .titulo-principal { font-size: 2.2rem; }
-  .titulo-seccion { font-size: 2rem; }
   .subtitulo { font-size: 1.2rem; }
   .foto-perfil { max-width: 200px; }
-  .clientes-grid { gap: 15px; }
-  .cliente-item { min-width: 100%; }
-  .btn-cta { font-size: 1rem; padding: 10px 25px; }
+  .btn-cta { font-size: 1rem; padding: 10px 24px; }
 }
-
 @media (max-width: 576px) {
-  .seccion { margin-top: 80px; padding: 50px 10px 30px; }
+  .seccion { margin-top: 80px; padding: 60px 10px 40px; }
   .titulo-principal { font-size: 1.8rem; }
-  .titulo-seccion { font-size: 1.6rem; }
-  .subtitulo { font-size: 1rem; }
-  .descripcion-breve { font-size: 1rem; }
-  .foto-perfil { max-width: 150px; }
-  .btn-cta { font-size: 0.9rem; padding: 8px 20px; margin: 5px; }
-  .navbar-brand { font-size: 1.1rem; }
-  .nav-link { font-size: 0.95rem; }
-  .texto-biografia { font-size: 1rem; text-align: left; }
-  .timeline { padding-left: 15px; }
-  .timeline-item { padding-left: 15px; }
+  .titulo-seccion { font-size: 1.8rem; }
 }

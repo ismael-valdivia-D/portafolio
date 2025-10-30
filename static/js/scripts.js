@@ -1,69 +1,10 @@
 // ========================================
 // FUNCIONES DE INTERACTIVIDAD - ISMAEL VALDIVIA
-// Portafolio + CV Profesional
-// Uso de 'this' para manipulación del DOM
+// Portafolio Profesional Moderno
 // ========================================
 
-/**
- * Resalta una tarjeta de servicio al pasar el mouse
- */
-function resaltarTarjeta(elemento) {
-  elemento.style.transform = 'translateY(-10px)';
-  elemento.style.transition = 'transform 0.3s ease';
-}
-
-/**
- * Restaura el estado original de la tarjeta de servicio
- */
-function restaurarTarjeta(elemento) {
-  elemento.style.transform = 'translateY(0)';
-}
-
-/**
- * Abre un repositorio de GitHub al hacer clic en una tarjeta de portafolio
- */
-function abrirRepositorio(elemento, url) {
-  window.open(url, '_blank');
-}
-
-/**
- * Muestra el tema seleccionado en el select de contacto
- */
-function mostrarTemaSeleccionado(select) {
-  const mensajeTema = document.getElementById('mensaje-tema');
-  if (select.value) {
-    mensajeTema.textContent = `Has seleccionado: ${select.options[select.selectedIndex].text}`;
-  } else {
-    mensajeTema.textContent = '';
-  }
-}
-
-/**
- * Elimina un elemento del DOM usando 'this'
- */
-function eliminarElemento(elemento) {
-  elemento.style.transition = 'opacity 0.5s ease';
-  elemento.style.opacity = '0';
-  setTimeout(() => elemento.remove(), 500);
-}
-
-/**
- * Modifica dinámicamente el contenido de un elemento
- */
-function modificarContenido(elemento, nuevoContenido) {
-  const contenidoOriginal = elemento.innerHTML;
-  elemento.style.transition = 'all 0.3s ease';
-  elemento.style.transform = 'scale(0.95)';
-  setTimeout(() => {
-    elemento.innerHTML = nuevoContenido;
-    elemento.style.transform = 'scale(1)';
-  }, 150);
-}
-
-// ========================================
-// INICIALIZACIÓN AL CARGAR EL DOM
-// ========================================
 document.addEventListener('DOMContentLoaded', () => {
+  // Resaltar navegación activa
   const secciones = document.querySelectorAll('.seccion');
   const enlacesNav = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -141,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
   efectoAparicionSecciones();
 
   // Mensaje en consola
-  console.log('%c¡Hola! 👋', 'font-size: 24px; color: #667eea; font-weight: bold;');
-  console.log('%cSoy Ismael Valdivia', 'font-size: 16px; color: #2c3e50;');
-  console.log('%cGracias por visitar mi portafolio', 'font-size: 14px; color: #7f8c8d;');
-  console.log('%c💻 Desarrollado con: HTML5, CSS3, JavaScript y Bootstrap', 'font-size: 12px; color: #95a5a6;');
-  console.log('%c🔗 GitHub: https://github.com/ismaelvaldivia', 'font-size: 12px; color: #3498db;');
+  console.log('%c¡Hola! 👋', 'font-size: 24px; color: #4f46e5; font-weight: bold;');
+  console.log('%cSoy Ismael Valdivia', 'font-size: 16px; color: #1e293b;');
+  console.log('%cGracias por visitar mi portafolio', 'font-size: 14px; color: #64748b;');
+  console.log('%c💻 Desarrollado con: HTML5, CSS3, JavaScript y Bootstrap', 'font-size: 12px; color: #94a3b8;');
+  console.log('%c🔗 GitHub: https://github.com/ismael-valdivia-D', 'font-size: 12px; color: #3b82f6;');
 });
